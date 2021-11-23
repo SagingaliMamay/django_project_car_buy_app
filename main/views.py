@@ -10,3 +10,7 @@ def index(request):
 
 def home(request):
     return render(request, 'main/about.html')
+
+
+def verkopen(request):
+    return render(request, 'main/verkopen.html')

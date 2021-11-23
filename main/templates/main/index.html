@@ -13,5 +13,7 @@
         <p>{{el.task}}</p>
     </div>
     {%endfor%}
-   {%endif%}
+   {% else %}
+    <p>Nothing</p>
+    {% endif %}
 {%endblock%}
