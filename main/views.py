@@ -14,6 +14,7 @@ def home(request):
 
 
 def verkopen(request):
+    error = ''
     # if user send something (by method POST)
     if request.method == 'POST':
         # create an object on base of TaskForm class
@@ -24,11 +25,13 @@ def verkopen(request):
             # save data into bd
             form.save()
             # redirect user at home page
-            redirect('home')
-
+            return redirect('home')
+        else:
+            error = 'Wrong form'
 
     form = TaskForm()
     context = {
-        'form': form
+        'form': form,
+        'error': error
     }
     return render(request, 'main/verkopen.html', context)
