@@ -10,10 +10,8 @@
     <p>Voorzie ons van zoveel mogelijk informatie door het formulier in te vullen. Een gedetailleerde beschrijving van uw voertuig zal uw kansen voor een succesvolle en snelle verkoop verhogen.</p>
     <form method="post" action="">
         {% csrf_token %}
-        <input type="text" placeholder="Enter Merk" class="form-control"><br>
-        <textarea name="" id="" cols="10" rows="5" placeholder="Beishcreiven" class="form-control">
-
-        </textarea><br>
+        {{form.title}}<br>
+        {{form.task}}<br>
       <button type="submit" class="btn btn-success">Send</button>
     </form>
 {%endblock%}
